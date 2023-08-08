@@ -18,20 +18,20 @@ let userEntries=retriveEntries();
 const displayEntries=()=>{
     const entries = retriveEntries();
     const tableEntries = entries.map((entry)=>{
-        const nameCell = `<td class='border px-4 py-2'>${entry.name}</td>`;
-        const emailCell = `<td class='border px-4 py-2'>${entry.email}</td>`;
-        const passwordCell = `<td class='border px-4 py-2'>${entry.password}</td>`;
-        const dobCell = `<td class='border px-4 py-2'>${entry.dob}</td>`;
-        const acceptTermsCell = `<td class='border px-4 py-2'>${entry.acceptedTermsAndconditions}</td>`;
+        const nameCell = `<td >${entry.name}</td>`;
+        const emailCell = `<td >${entry.email}</td>`;
+        const passwordCell = `<td >${entry.password}</td>`;
+        const dobCell = `<td class=>${entry.dob}</td>`;
+        const acceptTermsCell = `<td >${entry.acceptedTermsAndconditions}</td>`;
         const row = `<tr>${nameCell} ${emailCell} ${passwordCell} ${dobCell} ${acceptTermsCell}</tr>`;
         return row;
     }).join("\n");
     const table = `<table class="table-auto w-full"><tr>
-    <th class="px-4 py-2">Name</th>
-    <th class="px-4 py-2">Email</th>
-    <th class="px-4 py-2">Password</th>
-    <th class="px-4 py-2">dob</th>
-    <th class="px-4 py-2">accepted terms?</th>
+    <th >Name</th>
+    <th>Email</th>
+    <th >Password</th>
+    <th >dob</th>
+    <th>accepted terms?</th>
     </tr>${tableEntries}</table>`;
     
     let details = document.getElementById("user-entries");
