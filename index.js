@@ -61,7 +61,7 @@ const saveUserForm = (event)=>{
 
     if (age < 18 || age > 55) {
         const dobInput = document.getElementById("dob");
-        dobInput.setCustomValidity("Age must be between 18 and 54 years old.");
+        dobInput.setCustomValidity("Age must be between 18 and 55 years old.");
         dobInput.reportValidity()
         return; 
     }
